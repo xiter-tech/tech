@@ -8,13 +8,7 @@ const DEV_FILE = path.join(DATA_DIR, 'devices.json');
 function ensureStore() {
   if (!fs.existsSync(DATA_DIR)) fs.mkdirSync(DATA_DIR, { recursive: true });
   if (!fs.existsSync(LIC_FILE)) {
-    fs.writeFileSync(LIC_FILE, JSON.stringify({
-      'RZX-RIZX-BYTE-2026': {
-        expire: '2027-12-31',
-        max_devices: 3,
-        enabled: true
-      }
-    }, null, 2));
+    fs.writeFileSync(LIC_FILE, JSON.stringify({}, null, 2));
   }
   if (!fs.existsSync(DEV_FILE)) {
     fs.writeFileSync(DEV_FILE, JSON.stringify({}, null, 2));
