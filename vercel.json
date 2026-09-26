@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "builds": [
+    { "src": "api/activate.js", "use": "@vercel/node" }
+  ],
+  "routes": [
+    { "src": "/activate", "dest": "/api/activate.js" },
+    { "src": "/api/v1/activate", "dest": "/api/activate.js" },
+    { "src": "/activate.php", "dest": "/api/activate.js" }
+  ]
+}
